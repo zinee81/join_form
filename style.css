@@ -17,6 +17,8 @@
 .input {
   font-size: 14px;
   padding: 5px;
+  display: flex;
+  align-items: center;
 }
 input {
   width: 100%;
