@@ -1,0 +1,48 @@
+#wrap {
+  height: 100vh;
+  background-color: #dddddd;
+  padding: 20px;
+}
+.signup-form {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+}
+.txt,
+.input {
+  font-size: 14px;
+  padding: 5px;
+}
+input {
+  width: 100%;
+  height: 25px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+.alert {
+  color: red;
+  font-size: 12px;
+  padding: 3px 5px;
+}
+#termsText {
+  display: none;
+}
+#joinBtn {
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: 0;
+  background-color: cadetblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
