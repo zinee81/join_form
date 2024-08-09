@@ -46,7 +46,7 @@ $(function () {
       $("#user_pw2").val("");
     }
     // submit 이벤트를 실행해도 페이지가 새로고침 되지않음
-    event.preventDefault();
+    e.preventDefault();
   });
   // 약관 확인 >을 눌렀을 때 약관 내용을 보이고 숨기게 하는 이벤트
   $("#terms").click(function () {
