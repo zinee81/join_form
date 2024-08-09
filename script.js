@@ -37,6 +37,7 @@ $(function () {
     }
     // 이름, 이메일, 비밀번호가 빈칸이 아니고 비밀번호가 확인과 일치할때 정보 확인 출력
     if (user_name !== "" && user_mail !== "" && user_pw !== "" && user_pw === user_pw2) {
+      $("#result_tit").html("회원가입 정보 확인");
       $("#result").html(`사용자 이름 : ${user_name}<br />이메일 : ${user_mail}<br />비밀번호 : ${user_pw}<br />성별 : ${gender}`);
       // 정보 확인 출력 후 입력란을 비움
       $("#user_name").val("");
