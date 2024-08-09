@@ -5,7 +5,7 @@ $(function () {
     let user_mail = $("#user_mail").val().trim();
     let user_pw = $("#user_pw").val().trim();
     let user_pw2 = $("#user_pw2").val().trim();
-    let gender = $('input[name="gender"]:checked').val(); // 체크된 성별 값을 가져옴
+    let gender = $("input[name='gender']:checked").val(); // 체크된 성별 값을 가져옴
 
     // 이름을 입력하지 않았을때 경고메시지 출력
     if (user_name === "") {
