@@ -7,30 +7,29 @@ $(function () {
     let user_pw2 = $("#user_pw2").val().trim();
     let gender = $("input[name='gender']:checked").val(); // 체크된 성별 값을 가져옴
     let termsCheck = $("#termsCheck").is(":checked");
-    console.log(termsCheck);
 
     // 이름을 입력하지 않았을때 경고메시지 출력
-    if (user_name === "") {
+    if (!user_name) {
       $("#name_al").text("사용자 이름을 입력해주세요.");
       // 스페이스를 입력했을때 입력란을 비움
       $("#user_name").val("");
-    } else if (user_name !== "") {
+    } else {
       $("#name_al").text(""); // 이름을 입력했다면 경고 메시지 삭제
     }
     // 이메일을 입력하지 않았을때 경고메시지 출력
-    if (user_mail === "") {
+    if (!user_mail) {
       $("#mail_al").text("사용자 메일을 입력해주세요.");
       // 스페이스를 입력했을때 입력란을 비움
       $("#user_mail").val("");
-    } else if (user_mail !== "") {
+    } else {
       $("#mail_al").text(""); // 이메일을 입력했다면 경고 메시지 삭제
     }
     // 비밀번호를 입력하지 않았을때 경고메시지 출력
-    if (user_pw === "") {
+    if (!user_pw) {
       $("#pw_al").text("비밀번호를 입력해주세요.");
       // 스페이스를 입력했을때 입력란을 비움
       $("#user_pw").val("");
-    } else if (user_pw !== "") {
+    } else {
       $("#pw_al").text(""); // 비밀번호를 입력했다면 경고 메시지 삭제
     }
     // 입력한 비밀번호와 비밀번호 확인이 같지 않다면 경고메시지 출력
@@ -38,11 +37,15 @@ $(function () {
       $("#pw2_al").text("비밀번호가 일치하지 않습니다.");
       // 스페이스를 입력했을때 입력란을 비움
       $("#user_pw2").val("");
-    } else if (user_pw === user_pw2) {
+    } else {
       $("#pw2_al").text(""); // 비밀번호가 일치한다면 경고메시지 삭제
     }
+    // 약관동의를 하지 않으면 경고 메시지 출력
+    if (!termsCheck) {
+      alert("약관을 동의해주세요.");
+    }
     // 이름, 이메일, 비밀번호가 빈칸이 아니고 비밀번호가 확인과 일치할때 정보 확인 출력
-    if (user_name !== "" && user_mail !== "" && user_pw !== "" && user_pw === user_pw2) {
+    if (user_name && user_mail && user_pw && user_pw === user_pw2 && termsCheck) {
       $("#result_tit").html("회원가입 정보 확인");
       $("#result").html(`사용자 이름 : ${user_name}<br />이메일 : ${user_mail}<br />비밀번호 : ${user_pw}<br />성별 : ${gender}`);
       // 정보 확인 출력 후 입력란을 비움
