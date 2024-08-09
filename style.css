@@ -1,8 +1,10 @@
+/* 전체 배경색, 안쪽 여백 지정 */
 #wrap {
   height: 100vh;
   background-color: #dddddd;
   padding: 20px;
 }
+/* 회원가입 폼 배경색, 스타일 지정 */
 .signup-form {
   width: 400px;
   background-color: white;
@@ -10,9 +12,11 @@
   padding: 15px;
   margin: 0 auto;
 }
+/* 텍스트 가운데 정렬하는 클래스 */
 .center {
   text-align: center;
 }
+/* 회원가입 항목, 인풋 타입 div 스타일 지정 */
 .txt,
 .input {
   font-size: 14px;
@@ -20,24 +24,29 @@
   display: flex;
   align-items: center;
 }
+/* input 태그 스타일 적용 */
 input {
   width: 100%;
   height: 25px;
   border: 1px solid #cccccc;
   border-radius: 4px;
 }
+/* input 태그중에서 radio, checkbox 가로 사이즈 auto로 적용 */
 input[type="radio"],
 input[type="checkbox"] {
   width: auto;
 }
+/* 미입력시 출력되는 경고메시지 스타일 지정 */
 .alert {
   color: red;
   font-size: 12px;
   padding: 3px 5px;
 }
+/* 약관 내용 페이지 로딩시 안보이게 함 */
 #termsText {
   display: none;
 }
+/* 회원가입 버튼 스타일 지정 */
 #joinBtn {
   width: 100%;
   color: white;
