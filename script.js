@@ -12,24 +12,28 @@ $(function () {
     // 이름을 입력하지 않았을때 경고메시지 출력
     if (user_name === "") {
       $("#name_al").text("사용자 이름을 입력해주세요.");
+      $("#user_name").val("");
     } else if (user_name !== "") {
       $("#name_al").text(""); // 이름을 입력했다면 경고 메시지 삭제
     }
     // 이메일을 입력하지 않았을때 경고메시지 출력
     if (user_mail === "") {
       $("#mail_al").text("사용자 메일을 입력해주세요.");
+      $("#user_mail").val("");
     } else if (user_mail !== "") {
       $("#mail_al").text(""); // 이메일을 입력했다면 경고 메시지 삭제
     }
     // 비밀번호를 입력하지 않았을때 경고메시지 출력
     if (user_pw === "") {
       $("#pw_al").text("비밀번호를 입력해주세요.");
+      $("#user_pw").val("");
     } else if (user_pw !== "") {
       $("#pw_al").text(""); // 비밀번호를 입력했다면 경고 메시지 삭제
     }
     // 입력한 비밀번호와 비밀번호 확인이 같지 않다면 경고메시지 출력
     if (user_pw !== user_pw2) {
       $("#pw2_al").text("비밀번호가 일치하지 않습니다.");
+      $("#user_pw2").val("");
     } else if (user_pw === user_pw2) {
       $("#pw2_al").text(""); // 비밀번호가 일치한다면 경고메시지 삭제
     }
